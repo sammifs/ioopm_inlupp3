@@ -8,6 +8,9 @@ public class Assignment extends Binary {
     public SymbolicExpression eval(Environment vars) {
         SymbolicExpression e_lhs = this.lhs.eval(vars);
 
+        if (rhs.isNamedConstant()) {
+            throw new IllegalAssignmentException("Error: cannot redefine named constant");
+        }
         vars.put((Variable)rhs, e_lhs);
         return e_lhs;
     }

@@ -20,6 +20,16 @@ public class Test {
         }
     }
 
+    private static void testDoubleEvaluating(SymbolicExpression expected, SymbolicExpression e, Environment vars) {
+        SymbolicExpression r = e.eval(vars);
+        SymbolicExpression v = expected.eval(vars);
+        if (r.equals(v)) {
+            System.out.println("Passed: " + e);
+        } else {
+            System.out.println("Error: expected '" + v + "' but got '" + e + "'");
+        }
+    }
+
     private static void constPrintTest() {
         Constant c = new Constant(5);
         testPrinting("5.0", c);
@@ -88,6 +98,18 @@ public class Test {
 
         System.out.println("a = " + v.hashCode() + "\nb = " + v2.hashCode());
     }
+
+    private static void failedAssignmentTest() {
+        Environment var = new Environment();
+
+        NamedConstant v = new NamedConstant("x", 25.0);
+        Assignment a = new Assignment(new Constant(5), v);
+        Variable v2 = new Variable("x");
+        Assignment a2 = new Assignment(new Constant(5), v2);
+        
+        //testDoubleEvaluating(a, a2, var);
+        //^ will fail with IllegalAssignmentException as it should.
+    }
     public static void main(String[] args) {
         constPrintTest();
 
@@ -106,5 +128,7 @@ public class Test {
         simpleAssignmentEvalTest();
 
         assignmentHashTest();
+
+        failedAssignmentTest();
     }
 }

@@ -34,7 +34,7 @@ public class Calculator {
                         SymbolicExpression ans = se.eval(vars);
                         System.out.println(ans);
                         success++;
-                        if (ans instanceof Constant) {
+                        if (ans.isConstant()) {
                             full_evaluations++;
                         }
                     } catch (IllegalAssignmentException e) {

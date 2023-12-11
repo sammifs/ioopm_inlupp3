@@ -14,7 +14,7 @@ This program is made up of three packages.
 
 # Types and subtypes
 
-SymbolicExpression/
+'''SymbolicExpression/
 ├─ Binary/
 │  ├─ Addition
 │  ├─ Subtraction
@@ -33,5 +33,5 @@ SymbolicExpression/
 ├─ Command/
 │  ├─ Vars
 │  ├─ Quit
-│  ├─ Clear
+│  ├─ Clear'''
 

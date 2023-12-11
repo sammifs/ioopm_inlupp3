@@ -14,24 +14,23 @@ This program is made up of three packages.
 
 # Types and subtypes
 
-'''SymbolicExpression/
-├─ Binary/
-│  ├─ Addition
-│  ├─ Subtraction
-│  ├─ Multiplication
-│  ├─ Division
-│  ├─ Assignment
-├─ Unary/
-│  ├─ Sin
-│  ├─ Cos
-│  ├─ Exp
-│  ├─ Log
-│  ├─ Negation
-├─ Atom/
-│  ├─ Variable
-│  ├─ Constant
-├─ Command/
-│  ├─ Vars
-│  ├─ Quit
-│  ├─ Clear'''
-
+SymbolicExpression/  
+├─ Binary/  
+│  ├─ Addition  
+│  ├─ Subtraction  
+│  ├─ Multiplication  
+│  ├─ Division  
+│  ├─ Assignment  
+├─ Unary/  
+│  ├─ Sin  
+│  ├─ Cos  
+│  ├─ Exp  
+│  ├─ Log  
+│  ├─ Negation  
+├─ Atom/  
+│  ├─ Variable  
+│  ├─ Constant  
+├─ Command/  
+│  ├─ Vars  
+│  ├─ Quit  
+│  ├─ Clear
